@@ -1,0 +1,135 @@
+      :root {
+        --ink: #202124;
+        --muted: #60656b;
+        --line: #dfe2e5;
+        --paper: #f7f8f9;
+        --card: #ffffff;
+        --accent: #b84d2d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        position: relative;
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 64px 48px;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      h1 {
+        max-width: 620px;
+        margin: 0 250px 8px 0;
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(2.3rem, 6vw, 4.2rem);
+        line-height: 1.05;
+        letter-spacing: -0.055em;
+      }
+
+      h5 {
+        max-width: 580px;
+        margin: 0 250px 4px 0;
+        color: var(--accent);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      body > p {
+        margin: 0 250px 30px 0;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+      }
+
+      body > img {
+        position: absolute;
+        top: 64px;
+        right: 48px;
+        width: 190px;
+        height: 190px;
+        border: 8px solid var(--card);
+        border-radius: 50%;
+        box-shadow: 0 12px 30px rgba(32, 33, 36, 0.14);
+        object-fit: cover;
+      }
+
+      body > div {
+        margin: 22px 0;
+        padding: 26px 30px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--card);
+        box-shadow: 0 4px 14px rgba(32, 33, 36, 0.035);
+      }
+
+      body > div::first-line {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+      }
+
+      body > div p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      body > div p::first-line {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      body > div:last-of-type {
+        white-space: pre-line;
+      }
+
+      body > a {
+        display: inline-block;
+        margin: 8px 16px 0 0;
+        color: var(--accent);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      body > a:hover {
+        color: var(--ink);
+        text-decoration: underline;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          padding: 32px 20px 44px;
+          font-size: 16px;
+        }
+
+        h1,
+        h5,
+        body > p {
+          margin-right: 0;
+        }
+
+        body > img {
+          position: static;
+          display: block;
+          width: 140px;
+          height: 140px;
+          margin: 24px 0 30px;
+        }
+
+        body > div {
+          padding: 20px;
+        }
+      }
